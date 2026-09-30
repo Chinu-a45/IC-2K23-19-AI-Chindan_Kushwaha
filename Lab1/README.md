@@ -25,9 +25,6 @@ The Production Rule System successfully applies the defined rules and produces t
 ### Performance Analysis
 The rules are checked sequentially. The execution time is small because only a limited number of rules are used.
 
-### Screenshots / Graphs / Model Visualization
-Add a screenshot of the program and its output.
-
 ### Learning Outcomes
 - Understood Production Rule Systems.
 - Understood IF–THEN rules.
@@ -64,9 +61,6 @@ This means Jug A contains 2 litres and Jug B contains 0 litres.
 
 ### Performance Analysis
 The state space is small, with at most **20 possible states** for 4-litre and 3-litre jugs. Using visited states avoids repeated exploration.
-
-### Screenshots / Graphs / Model Visualization
-Add a screenshot of the program output and, if required, a state-space diagram.
 
 ### Learning Outcomes
 - Understood AI problem formulation.
