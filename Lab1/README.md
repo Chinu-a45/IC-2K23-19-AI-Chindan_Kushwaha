@@ -1,76 +1,24 @@
-# AI Lab – Lab 1
+# Lab 1 — AI Environment, Production Systems and State-Space Problems
 
-## Lab 1: AI Environment Setup, Production Systems and Water Jug Problem
+**Aim:** Model AI problems as states, actions, rules and goal tests.
 
----
+**Algorithm:** The production-system program repeatedly selects the first
+applicable rule. Water Jug and Missionaries & Cannibals use BFS over legal
+states. The vacuum agent senses the current room and applies Suck or Move.
 
-## Experiment 1: Production Rule System
+**Programs:** `production_system.py`, `water_jug.py`,
+`missionaries_cannibals.py`, `vacuum_cleaner.py`.
 
-### Aim
-To understand the concept of a Production Rule System and implement rule-based decision making using Python.
+**Run:** `python Lab1/production_system.py` (repeat for each file).
 
-### Problem Statement
-To represent knowledge using **IF–THEN production rules** and make a decision based on given conditions.
+**Results:** The water-jug program finds a shortest state path to 2 litres.
+The missionaries-and-cannibals program finds a legal crossing sequence. The
+vacuum agent cleans both rooms. Console output is reproducible.
 
-### Algorithm
-1. Define the required input conditions.
-2. Define the production rules.
-3. Check the conditions one by one.
-4. Apply the matching rule.
-5. Display the resulting decision.
+**Performance analysis:** BFS is complete for these finite state spaces and
+returns a shortest path in number of actions. Time and explored states are
+printed by the water-jug program. The other examples are small deterministic
+demonstrations.
 
-### Results / Output
-The Production Rule System successfully applies the defined rules and produces the appropriate decision based on the given conditions.
-
-### Performance Analysis
-The rules are checked sequentially. The execution time is small because only a limited number of rules are used.
-
-### Learning Outcomes
-- Understood Production Rule Systems.
-- Understood IF–THEN rules.
-- Learned basic rule-based decision making.
-- Implemented a simple AI reasoning system.
-
----
-
-## Experiment 2: Water Jug Problem
-
-### Aim
-To understand the Water Jug Problem and solve it using **State Space Representation** and search.
-
-### Problem Statement
-Given a 4-litre jug and a 3-litre jug, obtain exactly **2 litres in the 4-litre jug** while keeping the 3-litre jug empty.
-
-**Initial State:** `(0, 0)`  
-**Goal State:** `(2, 0)`
-
-### Algorithm
-1. Start from the initial state `(0, 0)`.
-2. Represent each state as `(Jug A, Jug B)`.
-3. Generate states using the allowed operations: fill, empty, and pour.
-4. Store visited states to avoid repetition.
-5. Search the state space until `(2, 0)` is reached.
-6. Display the sequence of operations.
-
-### Results / Output
-The problem is successfully solved and the final state obtained is:
-
-`(2, 0)`
-
-This means Jug A contains 2 litres and Jug B contains 0 litres.
-
-### Performance Analysis
-The state space is small, with at most **20 possible states** for 4-litre and 3-litre jugs. Using visited states avoids repeated exploration.
-
-### Learning Outcomes
-- Understood AI problem formulation.
-- Understood State Space Representation.
-- Learned initial and goal states.
-- Understood state transitions and operators.
-- Applied search to solve an AI problem.
-
----
-
-## Overall Result
-
-Both experiments were successfully implemented and demonstrated the basic concepts of **Production Systems, Rule-Based Reasoning, State Space Representation, and intelligent problem solving**.
+**Learning outcomes:** State-space modelling, production rules, legal-state
+constraints, goal testing and agent actions.
